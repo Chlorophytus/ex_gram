@@ -1,4 +1,7 @@
 defmodule Examples.Simple do
+  @moduledoc """
+  A simple echo command bot example.
+  """
   @bot :simple_bot
 
   use ExGram.Bot, name: @bot

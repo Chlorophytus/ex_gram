@@ -1,4 +1,8 @@
 defmodule ExGram.Middleware.IgnoreUsername do
+  @moduledoc """
+  A middleware that executes given commands without checking the issuer's
+  username.
+  """
   use ExGram.Middleware
 
   alias ExGram.Cnt

@@ -1,7 +1,12 @@
 defmodule ExGram.Commands do
-  def handle_command(handler, %{text: t} = m) do
-    if t == handler.cmd do
-      handler.execute(m)
+  @moduledoc """
+  Checks the message passed for a specific command that the middleware handles.
+  """
+
+  # TODO: Maybe we should make this use an Encoder-like wrapper?
+  def handle_command(handler, %{text: text} = message) do
+    if text == handler.cmd do
+      handler.execute(message)
     end
   end
 end
